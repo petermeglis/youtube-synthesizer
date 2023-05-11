@@ -13,10 +13,8 @@ def write_to_file(video_id, transcript):
   file_path = "output.md"
   print(f"Writing transcript to file: {file_path}")
 
-  body = f"### Video Transcript\n{transcript}"
-  footer = f"### Metadata\nVideo ID: {video_id}\n"
   with open(file_path, 'w') as file:
-    file.write(f"{body}\n\n{footer}")
+    file.write(f"{transcript}\n")
 
 def main():
   if len(sys.argv) != 2:
